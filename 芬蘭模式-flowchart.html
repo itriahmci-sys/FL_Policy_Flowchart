@@ -19,6 +19,26 @@
             justify-content:center; font-size:18px; color:#4a5568; }
   .li { display:flex; align-items:center; gap:5px; }
   .lb { width:16px; height:11px; border-radius:3px; flex-shrink:0; }
+
+  :root{ --info-accent:#2b8fd6; --info-accent-dark:#1e6fae; --info-tint1:#eef8ff; --info-tint2:#dceeff; }
+  .info-section{ max-width:1150px; margin:30px auto 0; }
+  .info-intro{
+    background:linear-gradient(135deg, var(--info-tint1), #e8f9f0);
+    border-radius:16px; padding:20px 22px; margin-bottom:20px;
+    font-size:13.5px; line-height:1.95; color:#33344a; box-shadow:0 4px 14px rgba(0,0,0,.05);
+  }
+  .info-h2{ font-size:1.2em; color:#1a202c; margin:0 0 16px; display:flex; align-items:center; gap:9px; font-weight:800; }
+  .info-h2 .bar{ width:6px; height:22px; border-radius:3px; background:var(--info-accent); display:inline-block; }
+  .info-block{ margin-bottom:24px; }
+  .info-block-title{ font-size:1.03em; font-weight:800; color:var(--info-accent-dark); margin:0 0 10px; display:flex; align-items:center; gap:7px; }
+  .info-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:12px; }
+  .info-card{ background:#fff; border:1px solid #eaf1f5; border-left:4px solid var(--info-accent); border-radius:10px; padding:14px 16px; font-size:12.8px; line-height:1.8; color:#4a5568; box-shadow:0 2px 8px rgba(0,0,0,.04); }
+  .info-card b, .info-card strong{ color:#1a202c; }
+  .k-num{ display:inline-block; background:var(--info-tint2); color:var(--info-accent-dark); font-weight:800; padding:1px 8px; border-radius:999px; font-size:11.5px; }
+  .info-stats{ display:flex; flex-wrap:wrap; gap:12px; margin:16px 0 4px; }
+  .stat-pill{ flex:1 1 150px; background:linear-gradient(135deg,var(--info-accent),#2f9e63); color:#fff; border-radius:12px; padding:14px 14px; text-align:center; box-shadow:0 4px 12px rgba(43,143,214,.25); }
+  .stat-pill .num{ font-size:1.35em; font-weight:800; display:block; }
+  .stat-pill .lab{ font-size:11px; opacity:.92; }
 </style>
 </head>
 <body>
@@ -359,6 +379,47 @@
     ─── 直接服務/指令 &nbsp;·&thinsp;-&thinsp;·&thinsp;- 監測/建議 &nbsp;◀──▶ 雙向互動
   </div>
 </div>
+
+<section class="info-section">
+  <div class="info-intro">
+    🇫🇮 芬蘭的故事要從 1972 年說起──當年北卡累利阿地區的心血管死亡率高居全球之冠，一場結合政府、農業轉型與民間組織（如瑪莎組織教大家煮菜）的「北卡累利阿計畫」，最終讓中年男性心血管死亡率暴跌 <span class="k-num">84%</span>，全民平均壽命延長 7 年。半世紀後的今天，這股「跨部門整合」的基因，演化成一套從社區篩檢到長期追蹤、科學實證與數位工具並重的代謝疾病防治系統。
+  </div>
+
+  <h2 class="info-h2"><span class="bar"></span>制度說明：五層生態系如何協同運作</h2>
+
+  <div class="info-grid">
+    <div class="info-card">
+      <div class="info-block-title">🩺 FINDRISC 社區篩檢＋DPS 實證基礎</div>
+      在社區藥局第一線推廣 <b>FINDRISC 8 題</b>無創免費問卷，一旦分數超過 15 分（高風險閾值），立即轉介做 HbA1c 血液檢測。這套流程奠基於著名的「芬蘭糖尿病預防研究（DPS）」──針對體重、脂肪、纖維、飽和脂肪、運動五大目標長期介入，證實可降低 <span class="k-num">58%</span> 糖尿病風險。
+    </div>
+    <div class="info-card">
+      <div class="info-block-title">💻 數位化整合生態</div>
+      <b>Omaolo</b> 是全國級線上自評平台，即時給風險回饋與數位教練建議，高危者會自動轉介護理師；<b>MyKanta</b> 則串起全國公私立醫療機構與藥局的病歷，讓健康數據跨區域共享。第一線由護理師統籌 <b>MDT 多學科團隊</b>，聯手營養師、運動與心理專家提供整合式照護。
+    </div>
+    <div class="info-card">
+      <div class="info-block-title">🏛️ 政策財政與租稅槓桿</div>
+      2014 年開徵<b>含糖飲料稅</b>直接降低糖分攝取；政府對低脂／無脂乳品定向補貼、撤銷高脂起司補貼，引導產業與消費雙轉型；再搭配與 NGO 共推的<b>心臟符號標章</b>，大幅降低消費者選擇健康食品的資訊成本。
+    </div>
+    <div class="info-card">
+      <div class="info-block-title">🎁 臨床資源與社區榮譽感</div>
+      參與生活方式介入者可獲免費健身房使用權、營養師個人化飲食計畫；學校全面供應嚴格營養規範的免費午餐，職場則推站立會議、走動溝通。政府與社區還會舉辦「戒菸贏大獎」競賽、透過電視真人秀示範生活轉變，用集體榮譽感驅動行為改變。
+    </div>
+  </div>
+
+  <div class="info-block" style="margin-top:22px;">
+    <div class="info-block-title">🔁 系統性行政管理改革</div>
+    <div class="info-card" style="border-left-color:#2f9e63;">
+      自 2023 年起，芬蘭推動 <b>22 個福利服務區改革</b>，由服務區統籌公私立資源，正式將代謝疾病防治列為國家優先事項，並在公費資助下全面推動 MDT 多學科整合照護——讓半世紀前的社區介入精神，延續進數位時代的制度骨架。
+    </div>
+  </div>
+
+  <div class="info-stats">
+    <div class="stat-pill"><span class="num">58%</span><span class="lab">DPS 生活方式介入降低糖尿病風險</span></div>
+    <div class="stat-pill"><span class="num">84%</span><span class="lab">北卡累利阿計畫心血管死亡率降幅</span></div>
+    <div class="stat-pill"><span class="num">+7年</span><span class="lab">國民平均壽命延長</span></div>
+    <div class="stat-pill"><span class="num">22 區</span><span class="lab">2023 年起的福利服務區改革</span></div>
+  </div>
+</section>
 
 <!-- AHMCI-FOOTER -->
 <footer style="max-width:1150px;margin:32px auto 0;padding:20px 24px;text-align:center;border-top:1px solid #eee1f5;font-family:'Noto Sans TC','Microsoft JhengHei','PingFang TC',-apple-system,BlinkMacSystemFont,sans-serif;color:#9c9db0;font-size:12px;">
